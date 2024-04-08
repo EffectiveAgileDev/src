@@ -7,37 +7,36 @@ from textwrap import dedent
 # You can also define custom agents in agents.py
 class CustomTasks:
     def __tip_section(self):
-        return "If you do your BEST WORK, I'll give you a $10,000 commission!"
+        return "Searching for the webpage that has the list of classes is a good starting point."
 
-    def task_1_name(self, agent, var1, var2):
+    def find_web_page(self, agent, var1):
         return Task(
             description=dedent(
                 f"""
-            Do something as part of task 1
+            Find the webpage that has the list of classes and extract the data elements needed.
             
             {self.__tip_section()}
     
             Make sure to use the most recent data as possible.
     
             Use this variable: {var1}
-            And also this variable: {var2}
         """
             ),
-            expected_output="Expected output here",
+            expected_output="The list of futher classes and the begining date of the first class after today's date.",
             agent=agent,
         )
 
-    def task_2_name(self, agent):
-        return Task(
-            description=dedent(
-                f"""
-            Take the input from task 1 and do something with it.
-                                       
-            {self.__tip_section()}
-
-            Make sure to do something else.
-        """
-            ),
-            expected_output="Expected output here",
-            agent=agent,
-        )
+#    def task_2_name(self, agent):
+#        return Task(
+#            description=dedent(
+#                f"""
+#            Take the input from task 1 and do something with it.
+#                                       
+#            {self.__tip_section()}
+#
+#            Make sure to do something else.
+#       """
+#            ),
+#            expected_output="Expected output here",
+#            agent=agent,
+     #   )

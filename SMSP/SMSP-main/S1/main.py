@@ -4,7 +4,7 @@ from langchain_openai import ChatOpenAI
 from decouple import config
 
 from textwrap import dedent
-from agents import CustomAgents
+# from agents import CustomAgents
 from tasks import CustomTasks
 
 # Install duckduckgo-search for this example:
@@ -22,9 +22,9 @@ os.environ["OPENAI_ORGANIZATION"] = config("OPENAI_ORGANIZATION_ID")
 
 
 class CustomCrew:
-    def __init__(self, var1, var2):
+    def __init__(self, var1):
         self.var1 = var1
-        self.var2 = var2
+    #    self.var2 = var2
 
     def run(self):
         # Define your custom agents and tasks in agents.py and tasks.py
@@ -32,24 +32,23 @@ class CustomCrew:
         tasks = CustomTasks()
 
         # Define your custom agents and tasks here
-        custom_agent_1 = agents.agent_1_name()
-        custom_agent_2 = agents.agent_2_name()
+        custom_agent_1 = agents.searcher()
+    #    custom_agent_2 = agents.agent_2_name()
 
         # Custom tasks include agent name and variables as input
-        custom_task_1 = tasks.task_1_name(
+        custom_task_1 = tasks.find_web_page(
             custom_agent_1,
-            self.var1,
-            self.var2,
+            self.var1
         )
 
-        custom_task_2 = tasks.task_2_name(
-            custom_agent_2,
-        )
+        #custom_task_2 = tasks.task_2_name(
+        #    custom_agent_2,
+        #)
 
         # Define your custom crew here
         crew = Crew(
-            agents=[custom_agent_1, custom_agent_2],
-            tasks=[custom_task_1, custom_task_2],
+            agents=[custom_agent_1],
+            tasks=[custom_task_1],
             verbose=True,
         )
 
@@ -62,9 +61,9 @@ if __name__ == "__main__":
     print("## Welcome to Crew AI Template")
     print("-------------------------------")
     var1 = input(dedent("""Enter variable 1: """))
-    var2 = input(dedent("""Enter variable 2: """))
+#    var2 = input(dedent("""Enter variable 2: """))
 
-    custom_crew = CustomCrew(var1, var2)
+    custom_crew = CustomCrew(var1)
     result = custom_crew.run()
     print("\n\n########################")
     print("## Here is you custom crew run result:")
