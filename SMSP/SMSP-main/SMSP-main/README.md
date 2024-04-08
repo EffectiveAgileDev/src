@@ -5,7 +5,18 @@ Creating an AI agent-based system to automate and streamline operations for your
 
 ### 1. Requirements Gathering and Planning
 - **Define Objectives:** Clearly outline what you want the AI system to achieve, such as automating class listings updates, scheduling social media posts, and analyzing engagement data.
+
+    Goal 1
+        The first goal would be for the system to access the web site and store a) the currnet date b) the date of the class c) the name of the class 
+        d) the location of the class e) the URL of the class listing
+
 - **Identify Features:** List down essential features like fetching new class listings from EffectiveAgileDev.com, creating post templates for classes, scheduling posts, and analytics.
+
+    Feature 1
+        Access a URL to find and make a list of the upcomming public classes stored for use by the system.
+    Feature 2
+        Open and read the list of public classes captured in Feature 1.  Select each class in order and pass each to the following operations.
+        
 - **Stakeholder Consultation:** Engage with team members and potential users to gather requirements and suggestions.
 
 ### 2. Data Collection and Analysis
