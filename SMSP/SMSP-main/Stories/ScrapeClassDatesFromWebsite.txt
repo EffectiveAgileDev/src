@@ -1,4 +1,5 @@
 As a User of SMSP
 I want to get a current list of class dates, class names, class locations from the EAD web site 
 So that alist of the dates is avalable for the system to use
-And we will know that is done when s list of dates is starts with the next class to the end of classes listed and it has the start date, end date, class name and class venue, venue address
+And we will know that is done when it has the cuurnt date, lists of dates and starts with the next class to the end of classes listed and it has the start date, 
+    end date, class name and class venue, venue address
