@@ -1,6 +1,7 @@
 from crewai import Task, Agent
 from textwrap import dedent
 
+
 class ClassAutomaticSocialMediaTasks():
     def manage_social_media_posts(self, agent, class_URL):
                 return Task(

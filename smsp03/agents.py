@@ -1,9 +1,6 @@
 from crewai import Agent
 from langchain.agents import load_tools
 
-# Human Tools
-human_tools = load_tools(["human"])
-
 
 class ClassAutomaticSocialMediaAgents():
     def posting_manager(self):
@@ -33,6 +30,7 @@ class ClassAutomaticSocialMediaAgents():
             backstory="""As a detail oriented and methodical data entry specialist, you are responsible for filling in the data for the future classes that start over 6 days from today's date.""",
             allow_delegation=True,
             verbose=True, 
+            tools=[load_data_tool],
         )
 
     def post_type_picker(self):
@@ -55,7 +53,7 @@ class ClassAutomaticSocialMediaAgents():
             Do NOT ask the human to create the title for you.""",
             allow_delegation=True,
             verbose=True,
-            tools=human_tools,
+            tools=[human_tools,search_tool,web_search_tool],
         )
     
     #def create_X_post(self):

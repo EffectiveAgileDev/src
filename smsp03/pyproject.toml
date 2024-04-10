@@ -1,5 +1,5 @@
 [tool.poetry]
-name = "starter"
+name = "smsp03"
 version = "0.1.0"
 description = "Automate Creating Social Media Posts for Listed Classes"
 authors = ["Rod Claar CST <rodclaar@effectiveagiledev.com>"]
