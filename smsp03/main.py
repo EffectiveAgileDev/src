@@ -42,22 +42,6 @@ manage_title_creator = tasks.manage_title_creator(
 )
 
 
-# 3. Create Tools
-
-# Human Tools
-human_tools = load_tools(["human"])
-
-from crewai_tools import (
-    ScrapeElementFromWebsiteTool,
-    SerperDevTool,
-    WebsiteSearchTool
-)
-
-load_data_tool = ScrapeElementFromWebsiteTool()
-search_tool = SerperDevTool()
-web_search_tool = WebsiteSearchTool()
-
-
 # Create a new Crew instance
 crew = Crew(
     agents=[posting_manager,

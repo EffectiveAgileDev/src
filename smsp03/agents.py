@@ -1,6 +1,21 @@
 from crewai import Agent
 from langchain.agents import load_tools
 
+# 3. Create Tools
+
+# Human Tools
+human_tools = load_tools(["human"])
+
+from crewai_tools import (
+    ScrapeElementFromWebsiteTool,
+    SerperDevTool,
+    WebsiteSearchTool
+)
+
+load_data_tool = ScrapeElementFromWebsiteTool()
+search_tool = SerperDevTool()
+web_search_tool = WebsiteSearchTool()
+
 
 class ClassAutomaticSocialMediaAgents():
     def posting_manager(self):
