@@ -9,12 +9,14 @@ human_tools = load_tools(["human"])
 from crewai_tools import (
     ScrapeElementFromWebsiteTool,
     SerperDevTool,
-    WebsiteSearchTool
+    WebsiteSearchTool,
+    XMLSearchTool
 )
 
 load_data_tool = ScrapeElementFromWebsiteTool()
 search_tool = SerperDevTool()
 web_search_tool = WebsiteSearchTool()
+XML_search_tool = XMLSearchTool()
 
 
 class ClassAutomaticSocialMediaAgents():
@@ -44,10 +46,11 @@ class ClassAutomaticSocialMediaAgents():
             role="Listing Data Fill",
             goal="""Fill in the data for the future classes including the begining date, end date, class title, class description, city location, venue location address, 
             and registration link for each class that starts over 6 days from today's date.""",
-            backstory="""As a detail oriented and methodical data entry specialist, you are responsible for filling in the data for the future classes that start over 6 days from today's date.""",
+            backstory="""As a detail oriented and methodical data entry specialist, you are responsible for filling in the data for the 
+            future classes that start over 6 days from today's date. Save the data in the class data for future reference.""",
             allow_delegation=True,
             verbose=True, 
-            tools=[load_data_tool],
+            tools=[XML_search_tool]
             )
 
     def post_type_picker(self):
