@@ -30,12 +30,12 @@ tasks = ClassAutomaticSocialMediaTasks()
 
 manage_social_media_posts = tasks.manage_social_media_posts(
     agent=posting_manager,
-    class_URL="D:\Users\RodClaar\src\smsp03\EventRSSFeed.xml"
+    class_URL=  "EventRSSFeed.xml"
 )
 
 manage_listing_data_fill = tasks.manage_listing_data_fill(
     agent=listing_data_fill,
-    class_URL="D:\Users\RodClaar\src\smsp03\EventRSSFeed.xml"
+    class_URL="EventRSSFeed.xml"
 )
 
 manage_post_type_picker = tasks.manage_post_type_picker(
