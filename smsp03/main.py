@@ -39,27 +39,27 @@ manage_listing_data_fill = tasks.manage_listing_data_fill(
 )
 
 manage_post_type_picker = tasks.manage_post_type_picker(
-    agent=post_type_picker
+    agent=post_type_picker,
     class_URL="EventRSSFeed.xml"
 )
 
 manage_title_creator = tasks.manage_title_creator(
-    agent=title_creator
+    agent=title_creator,
     class_URL="EventRSSFeed.xml"
 )
 
 manage_create_X_post = tasks.manage_create_X_post(
-    agent=create_X_post
+    agent=create_X_post,
     class_URL="EventRSSFeed.xml"
 )
 
 manage_create_FB_post = tasks.manage_create_FB_post(
-    agent=create_FB_post
+    agent=create_FB_post,
     class_URL="EventRSSFeed.xml"
 )
 
 manage_create_LI_post = tasks.manage_create_LI_post(
-    agent=create_LI_post
+    agent=create_LI_post,
     class_URL="EventRSSFeed.xml"
 )
 

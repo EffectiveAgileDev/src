@@ -46,7 +46,7 @@ class ClassAutomaticSocialMediaTasks():
             """)
         )
 
-    def manage_post_type_picker(self, agent):
+    def manage_post_type_picker(self, agent, class_URL):
         return Task(
             description=dedent(f"""Pick the post type for the class based on the type of class and the number of days in advance of the class start. 
                                if the couse title contains the word 'virtual' the post type should be "Virtual Class".  
@@ -61,7 +61,7 @@ class ClassAutomaticSocialMediaTasks():
             """)
         )
 
-    def manage_title_creator(self, agent):
+    def manage_title_creator(self, agent, class_URL):
         return Task(
             description=dedent(f"""Create a title for the post using the post type, class title, city location. The title should not be over 25 characters long and 
             should be engaging and informative.  If the class title contains the word 'virtual' the title should contain the string 'Virtual Class'.
@@ -73,7 +73,7 @@ class ClassAutomaticSocialMediaTasks():
                 """)
         )
     
-    def manage_create_X_post(self, agent):
+    def manage_create_X_post(self, agent, class_URL):
           return Task(
             description=dedent(f"""Create a post for X using the title and the class details. An X post is limited to 280 characters and should 
             contain the class title, class description, start date, certification, location, and registration link. """),
@@ -84,7 +84,7 @@ class ClassAutomaticSocialMediaTasks():
             """)
           )
     
-    def manage_create_FB_post(self, agent):
+    def manage_create_FB_post(self, agent, class_URL):
         return Task(
             description=dedent(f"""Create a post for Facebook using the title and the class details. The post should contain the class title, class description, 
             start date, certification, location, and registration link. """),
@@ -95,7 +95,7 @@ class ClassAutomaticSocialMediaTasks():
             """)
         )
     
-    def manage_create_LI_post(self, agent):
+    def manage_create_LI_post(self, agent, class_URL):
         return Task(
             description=dedent(f"""Create a post for LinkedIn using the title and the class details. The post should contain the class title, class description, 
             start date, certification, location, and registration link. """),
