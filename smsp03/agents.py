@@ -21,21 +21,21 @@ class ClassAutomaticSocialMediaAgents():
     def posting_manager(self):
         return Agent(
             role="Posting Manager",
-            goal="""Oversee the Social Media Posing prepration process including data retrieval, title ideation, 
-                the posts on X, Facebook and Linkedin, and email announcement creation reqired to make a social media post.
+            goal="""Oversee the Social Media Posing preparation process including data retrieval, title ideation, 
+                the posts on X, Facebook and LinkedIn, and email announcement creation required to make a social media post.
                 """,
-            backstory="""As a methodical and detailed oriented managar, you are responsible for overseeing the preperation of Social Mdeia posts for each class.
-                When creating Social Mdeia Posts, you follow the following process to create a post that has a high chance of success:
-                1. Search the website to ceate a list of the future classes storing the begining date, end date, class title, city location, venue location address, and registration link.
-                2. For each class in the list, examine the number of days in advance of the class start and create the appopriate posting the class.
+            backstory="""As a methodical and detailed oriented managar, you are responsible for overseeing the preparation of Social Media posts for each class.
+                When creating Social Media Posts, you follow the following process to create a post that has a high chance of success:
+                1. Search the website to create a list of the future classes storing the beginning date, end date, class title, city location, venue location address, and registration link.
+                2. For each class in the list, examine the number of days in advance of the class start and create the appropriate posting the class.
                 3. Write a title for post using the post type class, title, city location, and the number of days in advance of the class start.""",
-                #4. Create a post for X, Facebook, and Linkedin using the title and the class details.
-                #5. Create an email announcement for the class using the title and the class details.
-                #""",
+                          
             allow_delegation=True,
             verbose=True,
+            
         )
-
+                #4. Create a post for X, Facebook, and Linkedin using the title and the class details.
+                #5. Create an email announcement for the class using the title and the class details.
 
     def listing_data_fill(self):
         return Agent(
@@ -46,7 +46,7 @@ class ClassAutomaticSocialMediaAgents():
             allow_delegation=True,
             verbose=True, 
             tools=[load_data_tool],
-        )
+            )
 
     def post_type_picker(self):
         return Agent(
@@ -68,8 +68,9 @@ class ClassAutomaticSocialMediaAgents():
             Do NOT ask the human to create the title for you.""",
             allow_delegation=True,
             verbose=True,
-            tools=[human_tools,search_tool,web_search_tool],
+            tools=[web_search_tool],
         )
+    #tools=[human_tools,search_tool,web_search_tool],
     
     #def create_X_post(self):
         #TODO: Implement create X post

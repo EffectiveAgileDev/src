@@ -25,12 +25,12 @@ tasks = ClassAutomaticSocialMediaTasks()
 
 manage_social_media_posts = tasks.manage_social_media_posts(
     agent=posting_manager,
-    class_URL="https://effectiveagiledev.com/Find/tabid/157/Default.aspx"
+    class_URL="https://effectiveagiledev.com/DesktopModules/EventPlannerModule/EventRSSFeed.ashx?tabModuleId=1740&moduleId=967&portalId=0&tabid=157"
 )
 
 manage_listing_data_fill = tasks.manage_listing_data_fill(
     agent=listing_data_fill,
-    class_URL="https://effectiveagiledev.com/Find/tabid/157/Default.aspx"
+    class_URL="https://effectiveagiledev.com/DesktopModules/EventPlannerModule/EventRSSFeed.ashx?tabModuleId=1740&moduleId=967&portalId=0&tabid=157"
 )
 
 manage_post_type_picker = tasks.manage_post_type_picker(
@@ -54,6 +54,9 @@ crew = Crew(
            manage_title_creator],
 
     process=Process.hierarchical,
+    max_rpm=100,
+    share_crew=True,
+    full_output=True,
     manager_llm=OpenAIGPT4
 )
 

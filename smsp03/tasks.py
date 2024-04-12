@@ -22,8 +22,8 @@ class ClassAutomaticSocialMediaTasks():
                 - Save Now with Early Bird Pricing for the ScrumMaster Class in Portland
                 - ScrumMaster Class in Portland: Register Today and Save
                 - ScrumMaster Class in Portland: Early Bird Pricing Ends Soon
-                - Register Now for In-Person ScroumMaster Class in Bellevye
-                - In-Persson Traning for Scrum Is Bettter!
+                - Register Now for In-Person ScroumMaster Class in Bellevue
+                - In-Persson Training for Scrum Is Better!
             """),
 
             agent=agent,
