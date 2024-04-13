@@ -45,9 +45,9 @@ class ClassAutomaticSocialMediaAgents():
         return Agent(
             role="Listing Data Fill",
             goal="""Fill in the data for the future classes including the begining date, end date, class title, class description, city location, venue location address, 
-            and registration link for each class that starts over 6 days from today's date.""",
+            and registration link for each class that starts over 6 days from today's date. Use the encoding utf-8 that supports emojis.""",
             backstory="""As a detail oriented and methodical data entry specialist, you are responsible for filling in the data for the 
-            future classes that start over 6 days from today's date. Save the data in the class data for future reference.""",
+            future classes that start over 6 days from today's date. Be sure to import all future classes that are over 6days from today's date. Save the data in the class data for future reference.""",
             allow_delegation=True,
             verbose=True, 
             tools=[XML_search_tool]
@@ -56,9 +56,9 @@ class ClassAutomaticSocialMediaAgents():
     def post_type_picker(self):
         return Agent(
             role="Post Type Picker",
-            goal="""Pick the post type for the class based on the number of days in advance of the class start.""",
+            goal="""Pick the post type for the class based on the number of days in advance of the class start.Use the encoding utf-8 that supports emojis.""",
             backstory="""As a methodical and detail oriented post type picker, you are responsible for picking the post type for the class based on the number 
-            of days in advance of the class start.  Save the post type in the class data for future reference. """,
+            of days in advance of the class start.  Make sure you set a post type for all future classes that are 6 days or more from today's date.  Save the post type in the class data for future reference. """,
             allow_delegation=True,
             verbose=True,
             )
@@ -68,7 +68,8 @@ class ClassAutomaticSocialMediaAgents():
             role="Title Creator",
             goal="""Create a title for the post using the post type, class title, city location.""",
             backstory="""As a creative and detail oriented title creator, you are responsible for creating a title for the post using the post type, class title, 
-            city location, and the number of days in advance of the class start.  The title should not be over 25 characters long and should be engaging and informative.
+            city location, and the number of days in advance of the class start.  Make sure that you createatitle for each class over 6 days from today's date.  The title should not be over 25 characters long and should be engaging and informative.
+            Use the encoding utf-8 that supports emojis.
             
             It is vital that you ONLY ask for human feedback after you've created the title.
             Do NOT ask the human to create the title for you.""",
@@ -83,7 +84,9 @@ class ClassAutomaticSocialMediaAgents():
             role="Create X Post",
             goal="""Create a post for X using the title and the class details.""",
             backstory="""As a detail oriented and methodical post creator, you are responsible for creating a post for X using the title and the class details.  
-            An X post is limited to 280 characters and should contain the class title, class description, start date, certification, location, and registration link.""",
+            An X post is limited to 280 characters and should contain the class title, class description, start date, certification, location, and registration link.
+            Use the encoding utf-8 that supports emojis.  Make sure you create a post for each class over 6 days from today's date.
+            """,
             allow_delegation=True,
             verbose=True,
             )
@@ -94,7 +97,9 @@ class ClassAutomaticSocialMediaAgents():
             role="Create Facebook Post",
             goal="""Create a post for Facebook using the title and the class details.""",
             backstory="""As a detail oriented and methodical post creator, you are responsible for creating a post for Facebook using the title and the class details.  
-            A Facebook post is limited to 2000 characters and should contain the class title, class description, start date, certification, location, and registration link.""",
+            A Facebook post is limited to 2000 characters and should contain the class title, class description, start date, certification, location, and registration link.
+            Use the encoding utf-8 that supports emojis. Make sure you create a post for each class over 6 days from today's date.
+            """,
             allow_delegation=True,
             verbose=True,
             )
@@ -104,7 +109,9 @@ class ClassAutomaticSocialMediaAgents():
             role="Create LinkedIn Post",
             goal="""Create a post for LinkedIn using the title and the class details.""",
             backstory="""As a detail oriented and methodical post creator, you are responsible for creating a post for LinkedIn using the title and the class details.  
-            A LinkedIn post is limited to 3000 characters and should contain the class title, class description, start date, certification, location, and registration link. """,
+            A LinkedIn post is limited to 3000 characters and should contain the class title, class description, start date, certification, location, and registration link. 
+            Use the encoding utf-8 that supports emojis.  Make sure you create a post for each class over 6 days from today's date.
+            """,
             allow_delegation=True,
             verbose=True,
             )
