@@ -1,5 +1,7 @@
 from crewai import Crew, Process
 from langchain_openai import ChatOpenAI
+from datetime import date
+
 
 from dotenv import load_dotenv
 load_dotenv()
@@ -40,7 +42,8 @@ manage_listing_data_fill = tasks.manage_listing_data_fill(
 
 manage_post_type_picker = tasks.manage_post_type_picker(
     agent=post_type_picker,
-    class_URL="EventRSSFeed.xml"
+    class_URL="EventRSSFeed.xml",
+    current_date = date.today()
 )
 
 manage_title_creator = tasks.manage_title_creator(

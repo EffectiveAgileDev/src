@@ -24,7 +24,7 @@ class ClassAutomaticSocialMediaAgents():
         return Agent(
             role="Posting Manager",
             goal="""Oversee the Social Media Posing preparation process including data retrieval, title ideation, 
-                the posts on X, Facebook and LinkedIn, and email announcement creation required to make a social media post.
+                the posts on X, Facebook and LinkedIn, and email announcement creation required to make a social media post. Use the encoding utf-8 that supports emojis.  
                 """,
             backstory="""As a methodical and detailed oriented managar, you are responsible for overseeing the preparation of Social Media posts for each class.
                 When creating Social Media Posts, you follow the following process to create a post that has a high chance of success:

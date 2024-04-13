@@ -46,7 +46,7 @@ class ClassAutomaticSocialMediaTasks():
             """)
         )
 
-    def manage_post_type_picker(self, agent, class_URL):
+    def manage_post_type_picker(self, agent, class_URL, current_date):
         return Task(
             description=dedent(f"""Pick the post type for the class based on the type of class and the number of days in advance of the class start. 
                                if the couse title contains the word 'virtual' the post type should be "Virtual Class".  
