@@ -6,7 +6,7 @@ class ClassAutomaticSocialMediaTasks():
     def manage_social_media_posts(self, agent, class_URL):
                 return Task(
             description=dedent(f"""Oversee the Social Media Post prepration process including listed class lookup, title ideation, 
-                post creation. The ultimate goal is for you post each listed class to X, FaceBook and LinkdIn social media platforms.
+                post creation. The ultimate goal is for you post each listed class to X, FaceBook and LinkdIn social media platforms and an email announcing the class.
                                
                 The Class URL is is: {class_URL}
                              
@@ -29,7 +29,7 @@ class ClassAutomaticSocialMediaTasks():
 
             agent=agent,
             output_file="output/SocialMediaPosts.txt",
-            expected_output=dedent(f""" Create a report with each listed class and all of the Social Media Postes created for each class.               
+            expected_output=dedent(f""" Create a report with each listed class and all of the Social Media Postes created for each class and the email announcing the class.               
             """)
         )
 
