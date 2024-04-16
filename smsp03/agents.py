@@ -24,11 +24,11 @@ class ClassAutomaticSocialMediaAgents():
         return Agent(
             role="Posting Manager",
             goal="""Oversee the Social Media Posing preparation process including data retrieval, title ideation, 
-                the posts for each class in the data set for the social media platoforms of X, Facebook and LinkedIn, and email announcement creation required to make a social media post. Use the encoding utf-8 that supports emojis.  
+                the posts for each class 2 day class in the dataset for the social media platoforms of X, Facebook and LinkedIn, and email announcement creation required to make a social media post. Use the encoding utf-8 that supports emojis.  
                 """,
             backstory="""As a methodical and detailed oriented managar, you are responsible for overseeing the preparation of Social Media posts for each class.
                 When creating Social Media Posts, you follow the following process to create a post that has a high chance of success:
-                1. Search the website to create a list of the future classes storing the beginning date, end date, class title, city location, venue location address, and registration link.
+                1. Search the xml file to create a list of the future classes storing the beginning date, class title, city location, venue location address, and registration link.
                 2. For each class in the list, examine the number of days in advance of the class start and create the appropriate posting the class.
                 3. Write a title for each post using the post type class, title, city location, and the number of days in advance of the class start.
                 4. Create a post each class in the dataset for X, Facebook, and Linkedin using the title and the class details.
